@@ -28,7 +28,7 @@
 	function clean($link, $str){
 		$str = trim($str);
 		return mysqli_real_escape_string($link, $str);
-	}
+	} 
 	
 	//Sanitize the POST values
 	$login = clean($link, $_POST['username']);
@@ -67,7 +67,6 @@
 			$_SESSION['SESS_MEMBER_ID'] = $member['id'];
 			$_SESSION['SESS_FIRST_NAME'] = $member['name'];
 			$_SESSION['SESS_LAST_NAME'] = $member['position'];
-			//$_SESSION['SESS_PRO_PIC'] = $member['profImage'];
 			session_write_close();
 			header("location: main/index.php");
 			exit();
