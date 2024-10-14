@@ -1,0 +1,37 @@
+/* CSS Document */
+
+input{
+	border-radius:5px;
+	padding:10px;
+	color:blue;
+}
+button{
+	padding:5px;
+	border-radius:5px;
+
+}
+
+#resultTable {
+	color: #666666;
+    text-shadow: 0 1px 0 #FFFFFF;
+	width: 100%;
+	border: 1px solid #999999;
+	box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+	margin-top: 13px;
+}
+#resultTable thead tr th {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #222222;
+    padding: 10px 14px;
+    text-align: left;
+	border-top: 0 none;
+	font-size: 12px;
+}
+
+#resultTable tbody tr td{
+    background-color: #FFFFFF;
+	font-size: 11px;
+    text-align: left;
+	padding: 10px 14px;
+	border-top: 1px solid #999999;
+}

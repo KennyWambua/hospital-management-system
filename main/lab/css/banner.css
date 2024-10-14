@@ -1,0 +1,68 @@
+/* CSS Document */
+
+.banner-div{
+	position:relative;
+	height:150px;
+	width:100%;
+	margin:0 auto;
+	
+}
+.banner-div .logo{
+	position:absolute;
+	width:100%;
+	height:150px;
+	top:0;
+}
+.banner-div .logo img{
+	width:100%;
+	height:150px;
+}
+
+
+.banner-div .date{
+	text-align:center;
+	font-size:16px;
+	position:absolute;
+	width:20%;
+	right:80px;
+	top:90px;
+	color:#FFFFFF;
+	
+}
+.banner-div .time{
+	text-align:center;
+	font-size:16px;
+	position:absolute;
+	width:20%;
+	right:80px;
+	top:70px;
+	color:#FFFFFF;
+	
+}
+.banner-div .menus-div{
+	position:absolute;
+	width:81.5%;
+	height:40px;
+	right:0px;
+	top:109px;
+}
+.banner-div .main-menus{
+	font-size:36px;
+	position:absolute;
+	width:81.5%;
+	height:40px;
+	right:0px;
+	top:45px;
+	
+}
+
+/*---menus---*/
+nav ul{list-style-type:none;width:100%;margin:0;padding:0;}
+nav li{position:relative;float:left;margin:0;padding:0;}
+nav a{text-align:center;display:block;text-decoration:none;background:#00CCFF;color:blue;padding:11.5px 15px;-webkit-transition:all .40s ease;text-transform:uppercase;font-weight:bolder;}
+nav li:hover a{background-image:url(../images/body_bd.jpg); background-repeat:repeat;padding:11.5px 15px;-webkit-transition:all .40s ease;}
+nav li ul{left:0;top:40px;position:absolute;z-index:1;opacity:0;visibility:hidden;-webkit-transition:all .40s ease;}
+nav li:hover ul{visibility:visible;opacity:1;-webkit-transition:all .40s ease;}
+nav li ul li{width:100%;}
+nav li ul li a{width:100%;text-align:left;}
+nav li ul a:hover {background:#009f3c;}
