@@ -144,12 +144,7 @@
   <div id="header-with-tabs">
     <div class="page-full-width cf">
       <ul id="tabs" class="fl">
-
       </ul>
-
-      <!-- Change this image to your own company's logo -->
-      <!-- The logo will automatically be resized to 30px height. -->
-
     </div> <!-- end full-width -->
 
   </div>
@@ -161,12 +156,12 @@
 
       <div class="side-menu fl">
 
-        <h3>Main Dashbord</h3>
+        <h3>Main Dashboard</h3>
         <ul>
           <?php
           $position = $_SESSION['SESS_LAST_NAME'];
           if ($position == 'Administrator') {
-            ?>
+          ?>
             <li><a href="reception/new_patient.php">Reception</a><br /></li>
             <li> <a
                 href="doctor/select_patient.php?id=cash&transdep=PHARMACY&invoice=<?php echo $finalcode ?>">Doctor</a><br />
@@ -181,10 +176,10 @@
                 href="theatre/select_patient.php?id=cash&invoice=<?php echo $finalcode ?>">Theatre</a><br /></li>
             <li><a rel="facebox" href="users.php">Manage Users</a><br /></li>
             <li><a rel="facebox" href="services.php">Services</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'pharmacy') {
-            ?>
+          ?>
 
             <li><a href="pharmacy/line.php">Patient In Line</a><br /></li>
             <li><a href="accounts/services.php?id=cash&invoice=<?php echo $finalcode ?>">Patient payment</a><br /></li>
@@ -208,10 +203,10 @@
             <li><a href="pharmacy/consuptionreport.php">Drug Cons Report</a><br /></li>
             <li><a href="pharmacy/selectreceipt.php">Receipt Preview</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'admin_pharmacy') {
-            ?>
+          ?>
 
             <li><a href="pharmacy/line.php">Patient In Line</a><br /></li>
             <li><a href="pharmacy/cash_salesd.php?id=cash&transdep=PHARMACY&invoice=<?php echo $finalcode ?>">Cash
@@ -229,10 +224,10 @@
             <li><a
                 href="pharmacy/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=PHARMACY&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'accounts') {
-            ?>
+          ?>
 
             <li><a href="accounts/services.php?id=cash&invoice=<?php echo $finalcode ?>">Patient payment</a><br /></li>
             <li><a
@@ -250,10 +245,10 @@
             <li><a href="accounts/viewinvoices.php?d1=0&d2=0">View Invoices</a><br /></li>
             <li><a href="accounts/products1.php">Order List</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'nurse') {
-            ?>
+          ?>
 
             <li><a href="nurse/select_file.php">Inpatient File</a><br /></li>
             <li><a href="nurse/select_department.php">Inpatient Request</a><br /></li>
@@ -271,10 +266,10 @@
                 href="nurse/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=INPATIENT&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'martanity') {
-            ?>
+          ?>
 
             <li><a href="martanity/select_file.php">Inpatient File</a><br /></li>
             <li><a href="martanity/select_department.php">Inpatient Request</a><br /></li>
@@ -291,10 +286,10 @@
             <li><a
                 href="martanity/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=INPATIENT&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'Doctor I/c') {
-            ?>
+          ?>
             <li><a href="reception/new_patient.php">Add New Patient</a><br /></li>
             <li><a
                 href="doctor/patientsinline.php?doctor=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>&status=ACTIVE&transdep=DENTAL">Patients
@@ -318,10 +313,10 @@
             <li><a
                 href="doctor/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=DOCTOR&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'dental') {
-            ?>
+          ?>
 
             <li><a
                 href="dental/patientsinline.php?doctor=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>&status=ACTIVE">Patients
@@ -335,10 +330,10 @@
             <li><a href="dental/cash_sale.php?id=cash&transdep=DENTAL&invoice=<?php echo $finalcode ?>">Drug
                 Sale</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'optical') {
-            ?>
+          ?>
 
             <li><a
                 href="optical/patientsinline.php?doctor=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>&status=ACTIVE">Patients
@@ -352,10 +347,10 @@
             <li><a href="optical/cash_sale.php?id=cash&transdep=OPTICAL&invoice=<?php echo $finalcode ?>">Drug
                 Sale</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'mch') {
-            ?>
+          ?>
 
             <li><a href="mch/patientsinline.php?doctor=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>&status=ACTIVE">Patients
                 In Line</a><br /></li>
@@ -367,10 +362,10 @@
                 Request</a><br /></li>
 
 
-            <?php
+          <?php
           }
           if ($position == 'opd') {
-            ?>
+          ?>
 
             <li><a href="opd/patientsinline.php?doctor=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>&status=ACTIVE">Patients
                 In Line</a><br /></li>
@@ -381,35 +376,33 @@
                 href="opd/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=OPD&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'Receptionist') {
-            ?>
-
+          ?>
             <li><a href="reception/search_patient.php">Search Patient</a><br /></li>
             <li><a href="reception/new_patient.php">Add New Patient</a><br /></li>
-            <li><a href="reception/select_patient.php">Add Revist</a><br /></li>
             <li><a href="reception/patientss.php">View All Patients</a><br /></li>
             <li><a href="tri/select_patient.php">Triage</a><br />
-            <li><a href="reception/patientsreport.php?d1=0&d2=0">New Vist Report</a><br /></li>
-
-            <li><a href="reception/patientsreportr.php?d1=0&d2=0">Revist Report</a><br /></li>
+            <li><a href="reception/select_patient.php">Add Revist</a><br /></li>
+            <li><a href="reception/patientsreport.php?d1=0&d2=0">New Visit Report</a><br /></li>
+            <li><a href="reception/patientsreportr.php?d1=0&d2=0">Revisit Report</a><br /></li>
+            <li><a href="reception/diagnosisreport.php">Visit Reports</a><br /></li>
             <li><a href="reception/diagnosis.php?d1=0&d2=0&diagnosis=0">Diagnosis Report</a><br /></li>
-            <li><a href="reception/diagnosisreport.php">Vist Reports</a><br /></li>
             <li><a href="pharmacy/products.php">Pharmacy</a><br /></li>
             <li><a href="accounts/services1.php?id=cash&invoice=<?php echo $finalcode ?>">Payments</a><br /></li>
             <li><a href="reception/histselect.php">Medical Report Printout</a><br /></li>
-            <li><a href="reception/select_patientdis.php">Discharge summary Printout</a><br /></li>
-            <?php
+            <li><a href="reception/select_patientdis.php">Discharge Summary Printout</a><br /></li>
+          <?php
           }
           if ($position == 'tri') {
-            ?>
+          ?>
             <li><a href="tri/select_patient.php">Search Patient</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'Lab Technologist') {
-            ?>
+          ?>
             <li><a href="lab/labpatients.php?id=cash&transdep=PHARMACY&invoice=<?php echo $finalcode ?>">Patients In
                 Line</a><br /></li>
             <li><a href="lab/select_patient.php?id=cash&transdep=PHARMACY&invoice=<?php echo $finalcode ?>">Search
@@ -425,10 +418,10 @@
                 href="lab/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=LAB&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'physio') {
-            ?>
+          ?>
             <li><a href="physio/labpatients.php?id=cash&transdep=PHYSIOTHERAPY&invoice=<?php echo $finalcode ?>">Patients
                 In Line</a><br /></li>
             <li><a href="physio/select_patient.php?id=cash&transdep=PHYSIOTHERAPY&invoice=<?php echo $finalcode ?>">Search
@@ -439,10 +432,10 @@
             <li><a
                 href="physio/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=PHYSIOTHERAPY&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'x-ray') {
-            ?>
+          ?>
             <li><a href="x-ray/labpatients.php?id=cash&transdep=PHYSIOTHERAPY&invoice=<?php echo $finalcode ?>">Patients
                 In Line</a><br /></li>
             <li><a href="x-ray/select_patient.php?id=cash&transdep=PHYSIOTHERAPY&invoice=<?php echo $finalcode ?>">Search
@@ -453,10 +446,10 @@
             <li><a
                 href="x-ray/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=X-RAY&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'theatre') {
-            ?>
+          ?>
             <li><a href="theatre/labpatients.php?id=cash&transdep=THEATRE&invoice=<?php echo $finalcode ?>">Patients In
                 Line</a><br /></li>
             <li><a href="theatre/select_patient.php?id=cash&transdep=THEATRE&invoice=<?php echo $finalcode ?>">Search
@@ -467,10 +460,10 @@
             <li><a
                 href="theatre/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=THEATRE&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
-            <?php
+          <?php
           }
           if ($position == 'orthopedic') {
-            ?>
+          ?>
             <li><a href="orthopedic/labpatients.php?id=cash&transdep=THEATRE&invoice=<?php echo $finalcode ?>">Patients In
                 Line</a><br /></li>
             <li><a href="orthopedic/select_patient.php?id=cash&transdep=THEATRE&invoice=<?php echo $finalcode ?>">Search
@@ -482,10 +475,10 @@
                 href="orthopedic/storerequest.php?id=cash&invoice=<?php echo $finalcode ?>&transdep=ORTHOPEDIC&user=<?php echo $_SESSION['SESS_FIRST_NAME'] ?>">Store
                 Request</a><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'store') {
-            ?>
+          ?>
             <li><a href="store/drungsdespense.php?id=cash&invoice=<?php echo $finalcode ?>">Issue Drugs</a><br /><br />
             </li>
             <li><a href="store/products1.php">Products</a><br /><br /></li>
@@ -493,21 +486,20 @@
             </li>
             <li><a href="store/supplier.php">Suppliers</a><br /><br /></li>
 
-            <?php
+          <?php
           }
           if ($position == 'records') {
-            ?>
+          ?>
             <li><a href="records/patientsreport.php?d1=0&d2=0">Total Patients Number</a><br /></li>
             <li><a href="records/inpatientreport.php?d1=0&d2=0">In-Patient Number</a><br /></li>
             <li><a href="records/diagnosisreport.php">Diagnosis Report</a><br /></li>
             <li><a href="lab/labreport2.php?d1=0&d2=0">Pharmacy Report</a><br /></li>
             <li><a href="lab/labreport2.php?d1=0&d2=0">Birth/Death Reports</a><br /></li>
             <li><a href="lab/labreport2.php?d1=0&d2=0">Lab Report</a><br /></li>
-            <?php
+          <?php
           }
-
           if ($position == 'procument') {
-            ?>
+          ?>
             <li><a href="procument/select_dep.php?id=cash&invoice=<?php echo $finalcode ?>">Issue Drugs</a><br /></li>
             <li><a href="procument/products1.php">Products</a><br /></li>
             <li><a href="procument/issuereport.php?d1=0&d2=0&transdep=0">Issue Report</a><br /></li>
@@ -518,7 +510,7 @@
             </li>
             <li><a href="procument/supplier.php">Suppliers</a><br /></li>
 
-            <?php
+          <?php
           }
           ?>
         </ul>
@@ -540,47 +532,47 @@
           <?php
           $position = $_SESSION['SESS_LAST_NAME'];
           if ($position == 'Receptionist') {
-            ?>
+          ?>
 
-            <?php
+          <?php
           }
           if ($position == 'pharmacy') {
-            ?>
+          ?>
 
 
-            <?php
+          <?php
           }
           if ($position == 'accounts') {
-            ?>
+          ?>
 
 
-            <?php
+          <?php
           }
           if ($position == 'nurse') {
-            ?>
+          ?>
 
 
-            <?php
+          <?php
           }
           if ($position == 'Doctor I/c') {
-            ?>
+          ?>
 
 
-            <?php
+          <?php
           }
           if ($position == 'Lab Technologist') {
-            ?>
+          ?>
 
-            <?php
+          <?php
 
           }
           if ($position == 'records') {
-            ?>
+          ?>
             <img src="../victorias.jpg" width="1065px" height="500px" />
-            <?php
+          <?php
           }
           if ($position == 'Administrator') {
-            ?>
+          ?>
 
             <div align="left" id="content">
 
@@ -614,139 +606,153 @@
 
 
 
-                    <?php
-          }
+                  <?php
+                }
 
-          if ($position == 'procument') {
-            ?>
+                if ($position == 'procument') {
+                  ?>
                     <img src="../victorias.jpg" width="1065px" height="500px" />
-                    <?php
-          }
-          ?>
+                  <?php
+                }
+                  ?>
 
                   <div class="clearfix"></div>
-              </div>
+                </div>
 
-              </table>
-              <script>
-                $(function () {
-                  $(".btn_delete").click(function () {
-                    var element = $(this);
-                    var id = element.attr("id");
-                    var dataString = 'id=' + id;
-                    if (confirm("Sure you want to delete this item?")) {
-                      $.ajax({
-                        type: "GET",
-                        url: "temp_trans_del.php",
-                        data: dataString,
-                        success: function () {
+                </table>
+                <script>
+                  $(function() {
+                    $(".btn_delete").click(function() {
+                      var element = $(this);
+                      var id = element.attr("id");
+                      var dataString = 'id=' + id;
+                      if (confirm("Sure you want to delete this item?")) {
+                        $.ajax({
+                          type: "GET",
+                          url: "temp_trans_del.php",
+                          data: dataString,
+                          success: function() {
 
-                        }
-                      });
+                          }
+                        });
 
-                      $(this).parents(".record").animate({ backgroundColor: "#fbc7c7" }, "fast")
-                        .animate({ opacity: "hide" }, "slow");
-                    }
-                    return false;
+                        $(this).parents(".record").animate({
+                            backgroundColor: "#fbc7c7"
+                          }, "fast")
+                          .animate({
+                            opacity: "hide"
+                          }, "slow");
+                      }
+                      return false;
+                    });
+
                   });
+                </script>
 
-                });
-              </script>
+                <script type="text/javascript" src="autosum.js"></script>
 
-              <script type="text/javascript" src="autosum.js"></script>
+                <!-- jQuery 2.1.4 -->
+                <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+                <script src="../dist/js/jquery.min.js"></script>
+                <!-- Bootstrap 3.3.5 -->
+                <script src="../bootstrap/js/bootstrap.min.js"></script>
+                <script src="../plugins/select2/select2.full.min.js"></script>
+                <!-- SlimScroll -->
+                <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+                <!-- FastClick -->
+                <script src="../plugins/fastclick/fastclick.min.js"></script>
+                <!-- AdminLTE App -->
+                <script src="../dist/js/app.min.js"></script>
+                <!-- AdminLTE for demo purposes -->
+                <script src="../dist/js/demo.js"></script>
+                <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+                <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
 
-              <!-- jQuery 2.1.4 -->
-              <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-              <script src="../dist/js/jquery.min.js"></script>
-              <!-- Bootstrap 3.3.5 -->
-              <script src="../bootstrap/js/bootstrap.min.js"></script>
-              <script src="../plugins/select2/select2.full.min.js"></script>
-              <!-- SlimScroll -->
-              <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-              <!-- FastClick -->
-              <script src="../plugins/fastclick/fastclick.min.js"></script>
-              <!-- AdminLTE App -->
-              <script src="../dist/js/app.min.js"></script>
-              <!-- AdminLTE for demo purposes -->
-              <script src="../dist/js/demo.js"></script>
-              <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-              <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-
-              <script>
-                $(function () {
-                  $("#example1").DataTable();
-                  $('#example2').DataTable({
-                    "paging": true,
-                    "lengthChange": false,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true,
-                    "autoWidth": false
+                <script>
+                  $(function() {
+                    $("#example1").DataTable();
+                    $('#example2').DataTable({
+                      "paging": true,
+                      "lengthChange": false,
+                      "searching": false,
+                      "ordering": true,
+                      "info": true,
+                      "autoWidth": false
+                    });
                   });
-                });
-              </script>
-              <script>
-                $(function () {
-                  //Initialize Select2 Elements
-                  $(".select2").select2();
+                </script>
+                <script>
+                  $(function() {
+                    //Initialize Select2 Elements
+                    $(".select2").select2();
 
-                  //Datemask dd/mm/yyyy
-                  $("#datemask").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
-                  //Datemask2 mm/dd/yyyy
-                  $("#datemask2").inputmask("mm/dd/yyyy", { "placeholder": "mm/dd/yyyy" });
-                  //Money Euro
-                  $("[data-mask]").inputmask();
+                    //Datemask dd/mm/yyyy
+                    $("#datemask").inputmask("dd/mm/yyyy", {
+                      "placeholder": "dd/mm/yyyy"
+                    });
+                    //Datemask2 mm/dd/yyyy
+                    $("#datemask2").inputmask("mm/dd/yyyy", {
+                      "placeholder": "mm/dd/yyyy"
+                    });
+                    //Money Euro
+                    $("[data-mask]").inputmask();
 
-                  //Date range picker
-                  $('#reservation').daterangepicker();
-                  //Date range picker with time picker
-                  $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' });
-                  //Date range as a button
-                  $('#daterange-btn').daterangepicker(
-                    {
-                      ranges: {
-                        'Today': [moment(), moment()],
-                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                        'This Month': [moment().startOf('month'), moment().endOf('month')],
-                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    //Date range picker
+                    $('#reservation').daterangepicker();
+                    //Date range picker with time picker
+                    $('#reservationtime').daterangepicker({
+                      timePicker: true,
+                      timePickerIncrement: 30,
+                      format: 'MM/DD/YYYY h:mm A'
+                    });
+                    //Date range as a button
+                    $('#daterange-btn').daterangepicker({
+                        ranges: {
+                          'Today': [moment(), moment()],
+                          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                          'This Month': [moment().startOf('month'), moment().endOf('month')],
+                          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month')
+                            .endOf('month')
+                          ]
+                        },
+                        startDate: moment().subtract(29, 'days'),
+                        endDate: moment()
                       },
-                      startDate: moment().subtract(29, 'days'),
-                      endDate: moment()
-                    },
-                    function (start, end) {
-                      $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                    }
-                  );
+                      function(start, end) {
+                        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format(
+                          'MMMM D, YYYY'));
+                      }
+                    );
 
-                  //iCheck for checkbox and radio inputs
-                  $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                    checkboxClass: 'icheckbox_minimal-blue',
-                    radioClass: 'iradio_minimal-blue'
-                  });
-                  //Red color scheme for iCheck
-                  $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                    checkboxClass: 'icheckbox_minimal-red',
-                    radioClass: 'iradio_minimal-red'
-                  });
-                  //Flat red color scheme for iCheck
-                  $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                    checkboxClass: 'icheckbox_flat-green',
-                    radioClass: 'iradio_flat-green'
-                  });
+                    //iCheck for checkbox and radio inputs
+                    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                      checkboxClass: 'icheckbox_minimal-blue',
+                      radioClass: 'iradio_minimal-blue'
+                    });
+                    //Red color scheme for iCheck
+                    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                      checkboxClass: 'icheckbox_minimal-red',
+                      radioClass: 'iradio_minimal-red'
+                    });
+                    //Flat red color scheme for iCheck
+                    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                      checkboxClass: 'icheckbox_flat-green',
+                      radioClass: 'iradio_flat-green'
+                    });
 
-                  //Colorpicker
-                  $(".my-colorpicker1").colorpicker();
-                  //color picker with addon
-                  $(".my-colorpicker2").colorpicker();
+                    //Colorpicker
+                    $(".my-colorpicker1").colorpicker();
+                    //color picker with addon
+                    $(".my-colorpicker2").colorpicker();
 
-                  //Timepicker
-                  $(".timepicker").timepicker({
-                    showInputs: false
+                    //Timepicker
+                    $(".timepicker").timepicker({
+                      showInputs: false
+                    });
                   });
-                });
-              </script>
+                </script>
 </body>
 
 </html>

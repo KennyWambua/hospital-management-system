@@ -1,0 +1,169 @@
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  background-color: #FFFFFF;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Top bar section */
+#top-bar {
+  background-color: #2a2e36;
+}
+
+.page-full-width {
+  padding: 0 1.875em;
+  /* 30/16 */
+}
+
+#vertMenu {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width: 160px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#vertMenu h1 {
+  display: block;
+  background-color: #FF9900;
+  font-size: 90%;
+  padding: 3px 0 5px 3px;
+  border: 1px solid #000000;
+  color: #333333;
+  margin: 0px;
+  width: 159px;
+}
+
+#vertMenu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+#vertMenu ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+#vertMenu ul li a {
+  font-size: 80%;
+  display: block;
+  border-bottom: 1px dashed #C39C4E;
+  padding: 5px 0px 2px 4px;
+  text-decoration: none;
+  color: #666666;
+  width: 160px;
+}
+
+#vertMenu ul li a:hover,
+#vertMenu ul li a:focus {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+#header-with-tabs {
+  padding: 0.25em 0 0;
+}
+
+ul#tabs {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px auto;
+}
+
+ul#tabs li a {
+  border: 1px solid #eeefef;
+  border-bottom: none;
+  padding: 1.5em 1em;
+  margin: 0 0.416em -1px 0;
+  display: block;
+  color: #9498a1;
+}
+
+ul#tabs li a:hover {
+  color: #2a2e36;
+}
+
+.style1 {
+  color: #000000;
+}
+
+div.pagination {
+  padding: 3px;
+  margin: 3px;
+}
+
+div.pagination a {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #AAAADD;
+  text-decoration: none;
+  /* no underline */
+  color: #000099;
+}
+
+div.pagination a:hover,
+div.pagination a:active {
+  border: 1px solid #000099;
+  color: #000;
+}
+
+div.pagination span.current {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #000099;
+  font-weight: bold;
+  background-color: #000099;
+  color: #FFF;
+}
+
+div.pagination span.disabled {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #EEE;
+  color: #DDD;
+}
+
+input[type="date"] {
+  color: #858d9c;
+  height: 25px;
+  width: 250px;
+  padding: 0.4em 0em;
+  border: 1px solid #d9dbdd;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+  border: 1px solid #bbbdbe;
+  outline: none;
+}
+
+::-webkit-datetime-edit {
+  padding: 1em;
+  font-size: 1rem;
+}
+
+::-webkit-datetime-edit-text {
+  color: black;
+  padding: 0 0.3em;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+::-webkit-calendar-picker-indicator {
+  margin-right: 10px;
+  font-size: x-large;
+  cursor: pointer;
+}
+ 

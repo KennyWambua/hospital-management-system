@@ -12,8 +12,24 @@ function createRandomPassword()
   }
   return $pass;
 }
-$finalcode = 'RS-' . createRandomPassword();
+$finalCode = 'RS-' . createRandomPassword();
 ?>
+
+<script language="javascript">
+    function clickHereToPrint() {
+      var displaySetting = "toolbar=yes,location=no,directories=yes,menubar=yes,";
+      displaySetting += "scrollbars=yes,width=900, height=400, left=100, top=25";
+      var contentValue = document.getElementById("content").innerHTML;
+      var documentPrint = window.open("", "", displaySetting);
+      documentPrint.document.open();
+      documentPrint.document.write(
+        '</head><body onLoad="self.print()" style="width: 900px; font-size:11px; font-family:arial; font-weight:normal;">'
+      );
+      documentPrint.document.write(contentValue);
+      documentPrint.document.close();
+      documentPrint.focus();
+    }
+  </script>
 
 <style type="text/css">
   body {
