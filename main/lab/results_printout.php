@@ -137,6 +137,11 @@ div.pagination span.current {
 		color: #DDD;
 
 	}
+	table {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            width: 100%;
+        }
 
 	
  
@@ -227,12 +232,8 @@ function Clickheretoprint()
 <H1 align="center"><B><?php
 	$p=$_GET['patient_id'];
 	include('connect.php');
-	 
-	
 	$result = $db->prepare("SELECT * FROM patient WHERE patient_id = :p ");
 	$result->bindParam(':p', $p);
-	
-		
 		
 		$result->execute();
 		for($i=0; $row = $result->fetch(); $i++){
@@ -280,7 +281,7 @@ function Clickheretoprint()
            
             <td><?php echo $row['report_type']; ?></td>
 			
-            <td><?php echo $row['description']; ?><br><?php echo $row['description1']; ?><br><?php echo $row['description2']; ?><br><?php echo $row['description3']; ?><br><?php echo $row['description4']; ?><br><?php echo $row['description5']; ?><br><?php echo $row['description6']; ?><br><?php echo $row['description7']; ?><br><?php echo $row['description8']; ?><br><?php echo $row['description9']; ?><br></td>
+            <td><?php echo $row['description1']; ?><br><?php echo $row['description2']; ?><br><?php echo $row['description3']; ?><br><?php echo $row['description4']; ?><br><?php echo $row['description5']; ?><br><?php echo $row['description6']; ?><br><?php echo $row['description7']; ?><br><?php echo $row['description8']; ?><br><?php echo $row['description9']; ?><br><?php echo $row['description10']; ?><br><?php echo $row['description']; ?><br></td>
             
             
 			
@@ -292,7 +293,7 @@ function Clickheretoprint()
 			?>
 		
 	</tbody>
-	<table border="1" cellpadding="4" cellspacing="0" style="font-family: arial; font-size: 15px;  text-align:left;" width="100%">
+	<table border="1" cellpadding="4" cellspacing="0" style="font-family: arial; font-size: 15px;  text-align:left; margin-top: 50px;" width="100%">
                  <tr>
 					<td colspan="5" align="left"><strong style="font-size: 15px; text-align:left; color: #222222; border-color:#03F "> Test Done By:		</strong></td>
 					<td colspan="5" align="center"><strong style="font-size: 15px; text-align:left; color: #222222; border-color:#03F "> </strong></td>

@@ -329,7 +329,7 @@ require_once('auth.php');
 
                   <?php
                   include('../connect.php');
-                  $result = $db->prepare("SELECT * FROM services");
+                  $result = $db->prepare("SELECT * FROM services ORDER BY product_name ASC");
                   $result->execute();
                   $date = date('Y-m-d');
                   $count = 1;

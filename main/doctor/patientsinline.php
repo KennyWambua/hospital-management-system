@@ -309,7 +309,7 @@ require_once('auth.php');
 
 									</tr>
 								<?php
-								}
+					
 								?>
 
 

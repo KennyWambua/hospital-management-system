@@ -294,7 +294,7 @@ require_once('auth.php');
 									<?php
 									break;
 
-								case 'Urinalysis ':
+								case 'Urinalysis':
 									?>
 									<div class="testForm">
 										<input type="text" name="description1" value="Protein : " class="styled-input"> <br><br>

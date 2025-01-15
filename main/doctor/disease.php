@@ -270,40 +270,32 @@ $finalcode='RS-'.createRandomPassword();
 <div style="font-weight:bold; text-align:center;font-size:14px;margin-bottom: 15px;">
 
 </div>
- <a id="addd" href="adddisease.php" style="float: none;"><input type="button"  class="button round blue image-right ic-add text-upper" align="middle" value="New Disease"/></a>
-<table id="resultTable" data-responsive="table" style="text-align: left;">
+ <a id="addd" href="adddisease.php" style="float: none;"><input type="button"  class="button round blue image-right ic-add text-upper" align="middle" value="New Disease" style="width: 120px; cursor: pointer;"/></a>
+<table id="resultTable" data-responsive="table" style="text-align: left; margin-top: 20px;">
 	<thead>
 		<tr>
-            <th width="10%"> Id </th>
-			<th width="20%"> Disease Code </th>
+            <th width="10%"> No</th>
             <th width="35%"> Disease Name </th>
-            
-           
-			
+            <th width="35%"> Action </th>
 		</tr>
 	</thead>
 	<tbody>
-		
-		
 				<?php
 				include('connect.php');
-				
-				
-				$result = $db->prepare("SELECT * FROM diagnosis " );
-				
+				$result = $db->prepare("SELECT * FROM diagnosis ORDER BY name ASC" );
 				$result->execute();
+				$count = 1;
 				for($i=0; $row = $result->fetch(); $i++){
 			?>
 			<tr class="record">
-            <td><?php echo $row['id']; ?></td>
-
-			<td><?php echo $row['code']; ?></td>
+            <td><?php echo $count++; ?></td>
 			<td><?php echo $row['name']; ?></td>
-			
-			
-			
-         
-              
+			<td>
+                        <a rel="facebox" href="editDisease.php?id=<?php echo $row['id']; ?>">
+                          Edit </a> |
+                        <a href="javascript:void(0);" id="<?php echo $row['id']; ?>" class="delbutton"
+                          title="Click To Delete">Delete</a>
+                      </td>
 			
 			</tr>
 			<?php
@@ -318,5 +310,35 @@ $finalcode='RS-'.createRandomPassword();
 </div>
 <div class="clearfix"></div>
 </div>
+<script type="text/javascript">
+    $(function () {
+      $(".delbutton").click(function () {
+        var element = $(this);
+        var del_id = element.attr("id");
+        var info = 'id=' + del_id;
+        if (confirm("Confirm to delete this disease?")) {
+
+          $.ajax({
+            type: "GET",
+            url: "deleteDisease.php",
+            data: info,
+            success: function (response) {
+              if (response === "success") {
+                alert('Disease deleted successfully');
+                window.location.href="disease.php"
+              }
+              else {
+                alert('Error deleting disease: ' + response);
+              }
+            },
+            error: function (xhr, status, error) {
+              alert('AJAX error: ' + error);
+            }
+          });
+        }
+        return false;
+      });
+    });
+  </script>
 </body>
 </html>
