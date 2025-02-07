@@ -501,7 +501,7 @@ require_once('auth.php');
                         for ($i = 0; $row = $result->fetch(); $i++) {
                           ?>
                             <?php echo $row['report_type']; ?>--------------
-                            <?php echo $row['description1']; ?>    <?php echo $row['description2']; ?>    <?php echo $row['description3']; ?>    <?php echo $row['description4']; ?>    <?php echo $row['description']; ?>    <?php echo $row['description5']; ?>    <?php echo $row['description6']; ?>    <?php echo $row['description7']; ?>    <?php echo $row['description8']; ?>    <?php echo $row['description9']; ?>
+                            <?php echo $row['description']; ?>    <?php echo $row['description1']; ?>    <?php echo $row['description2']; ?>    <?php echo $row['description3']; ?>    <?php echo $row['description4']; ?>        <?php echo $row['description5']; ?>    <?php echo $row['description6']; ?>    <?php echo $row['description7']; ?>    <?php echo $row['description8']; ?>    <?php echo $row['description9']; ?>   <?php echo $row['description10']; ?>
                         
                             <?php
                         }

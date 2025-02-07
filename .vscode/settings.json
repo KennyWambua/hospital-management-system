@@ -3,5 +3,9 @@
         "buyingrate",
         "errflag",
         "Urobilinogen"
-    ]
+    ],
+    "editor.defaultFormatter": "rifi2k.format-html-in-php",
+    "[php]": {
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    }
 }

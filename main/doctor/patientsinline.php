@@ -272,27 +272,19 @@ require_once('auth.php');
 									<th width="10%"> Patient No </th>
 									<th width="30%"> Patient Name </th>
 									<th width="30%"> Insurance </th>
-
 									<th width="30%"> Department </th>
-
 									<th width="15%"> Date/Time </th>
 									<th width="25%"> Action </th>
-
 								</tr>
 							</thead>
 							<tbody>
-
-
 								<?php
 								include('connect.php');
 								$a = $_GET['doctor'];
 								$b = 'ACTIVE';
-
-
 								$result = $db->prepare("SELECT * FROM quee WHERE  doctor=:a AND department='DOCTOR' or department='Results-ready' AND status=:b order by time desc");
 								$result->bindParam(':a', $a);
 								$result->bindParam(':b', $b);
-
 								$result->execute();
 								for ($i = 0; $row = $result->fetch(); $i++) {
 								?>
@@ -302,20 +294,12 @@ require_once('auth.php');
 										<td><?php echo $row['insurance_id']; ?></td>
 										<td><?php echo $row['department']; ?></td>
 										<td><?php echo $row['time']; ?></td>
-
 										<td><a rel="facebox" href="patient_file.php?patient_id=<?php echo $row['patient_id']; ?>&date=<?php echo $row['date']; ?>"><input type="button" class="button round blue image-right ic-add text-upper" align="left" value="Attend " /></a>
-
-
-
 									</tr>
 								<?php
-					
+								}
 								?>
-
-
-								</th>
-								</tr>
-								</thead>
+							</tbody>
 						</table>
 					</div>
 					<div class="clearfix"></div>
